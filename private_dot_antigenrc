@@ -1,0 +1,15 @@
+antigen use oh-my-zsh
+
+antigen bundle brew
+antigen bundle git
+antigen bundle heroku
+antigen bundle jsontools
+antigen bundle jump
+antigen bundle zsh-navigation-tools
+antigen bundle command-not-found
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen theme tjkirch
+
+antigen apply

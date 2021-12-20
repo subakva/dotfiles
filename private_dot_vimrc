@@ -1,0 +1,33 @@
+set nocompatible
+
+set nobackup
+set noswapfile
+set nowb
+set history=50
+
+set ruler
+set showcmd
+set number
+
+set incsearch
+set ignorecase
+set smartcase
+
+set autoindent
+set smarttab
+set smartindent
+set expandtab
+set tabstop=2
+set shiftwidth=2
+
+set autoread
+
+syntax on
+
+filetype plugin indent on
+autocmd FileType text setlocal textwidth=100
+
+map <C-right> :tabn<cr>
+map <C-left> :tabp<cr>
+
+
