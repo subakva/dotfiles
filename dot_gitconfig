@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Jason Wadsworth
+	email = jdwadsworth@gmail.com
+
+[init]
+	defaultBranch = main
