@@ -12,6 +12,7 @@ tap "buo/cask-upgrade"
 
 brew "antigen"
 brew "chezmoi"
+brew "colordiff"
 brew "cowsay"
 brew "direnv"
 brew "fortune"

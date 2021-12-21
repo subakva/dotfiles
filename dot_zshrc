@@ -1,0 +1,78 @@
+
+export PATH="$HOME/.bin:$PATH"
+# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+echo "Initializing homebrew completions..."
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
+echo "Initializing rbenv..."
+export RBENV_ROOT=~/.rbenv
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+eval "$(rbenv init - zsh)"
+
+
+echo "Initializing nodenv..."
+export NODENV_ROOT=~/.nodenv
+eval "$(nodenv init - --no-rehash)"
+
+echo "Initializing direnv..."
+eval "$(direnv hook zsh)"
+
+echo "Initializing jenv..."
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+echo "Initializing pyenv..."
+export PYENV_ROOT="$HOME/.pyenv"
+eval "$(pyenv init --path)"
+
+# echo "Initializing go..."
+# export GOPATH=$HOME/Code/heroku/go
+
+echo "Configuring Postgres.app..."
+export POSTGRESAPP_ROOT=/Applications/Postgres.app/Contents/Versions
+export POSTGRESAPP_VERSION=14
+export PATH="$POSTGRESAPP_ROOT/$POSTGRESAPP_VERSION/bin:$PATH"
+# alias psql96="$POSTGRESAPP_ROOT/9.6/bin/psql"
+# alias psql10="$POSTGRESAPP_ROOT/10/bin/psql"
+# alias psql11="$POSTGRESAPP_ROOT/11/bin/psql"
+# alias psql12="$POSTGRESAPP_ROOT/12/bin/psql"
+# alias psql13="$POSTGRESAPP_ROOT/13/bin/psql"
+# alias psql14="$POSTGRESAPP_ROOT/14/bin/psql"
+
+echo "Initializing antigen..."
+source /opt/homebrew/share/antigen/antigen.zsh
+antigen init $HOME/.antigenrc
+
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+alias upcase='tr a-z A-Z'
+
+alias axbrew='arch -x86_64 /usr/local/homebrew/bin/brew'
+alias be='bundle exec'
+alias gti='git'
+
+alias fp="ps -ef | grep -i "            # Find process
+alias fpp="lsof -i -P | grep -i listen" # Find ports in use
+alias pgrep="ps aux | grep "
+alias iso8601-"date +%Y-%m-%dT%H:%M:%S%z"
+
+export BUNDLER_EDITOR=code
+export GEM_EDITOR=code
+export EDITOR=vi
+
+unsetopt nomatch # prevent errors with rake arguments - https://thoughtbot.com/blog/how-to-use-arguments-in-a-rake-task
+
+# This breaks `chezmoi cd`. maybe I won't miss it.
+# if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
+#   # cd ~/Code/heroku || return
+#   cd ~/Code || return
+# fi
+
+fortune | cowsay | lolcat
