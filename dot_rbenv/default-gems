@@ -1,0 +1,7 @@
+bundler
+bundle-audit
+rubocop
+ruby-debug-ide
+standard
+byebug
+
