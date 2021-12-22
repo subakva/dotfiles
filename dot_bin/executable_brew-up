@@ -2,4 +2,38 @@
 
 set -o errexit
 
+if ! command -v brew &> /dev/null
+then
+  echo
+  echo "Couldn't find the brew command. Trying to install it."
+  echo "Get your password ready..."
+
+  echo
+  echo "Installing homebrew..."
+  echo
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  echo
+  echo "Installing rosetta..."
+  echo
+  /usr/sbin/softwareupdate --install-rosetta
+
+  echo
+  echo "Installing homebrew for rosetta..."
+  echo
+  pushd ~/Downloads
+  mkdir homebrew
+  curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+  sudo mv homebrew /usr/local/homebrew
+  popd
+fi
+
+echo
+echo "Updating brew packages..."
+echo
 brew bundle --file ~/.bin/Brewfile
+
+echo
+echo "Updating rosetta brew packages..."
+echo
+arch -x86_64 /usr/local/homebrew/bin/brew bundle --file ~/.bin/Brewfile.rosetta

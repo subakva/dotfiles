@@ -27,6 +27,7 @@ brew "heroku"
 brew "jenv"
 brew "jq"
 brew "lolcat"
+brew "mas"
 brew "nodenv"
 brew "nodenv-aliases"
 brew "nodenv-default-packages"
@@ -61,3 +62,6 @@ cask "the-clock"
 cask "todoist"
 cask "visual-studio-code"
 cask "zoom"
+
+mas "Bear", id: 1091189122
+mas "Save to Pocket", id: 1477385213
