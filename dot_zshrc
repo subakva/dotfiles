@@ -53,6 +53,7 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 alias upcase='tr a-z A-Z'
+alias diff='colordiff'
 
 alias axbrew='arch -x86_64 /usr/local/homebrew/bin/brew'
 alias be='bundle exec'
