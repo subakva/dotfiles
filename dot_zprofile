@@ -1,0 +1,4 @@
+# brew in rosetta
+eval "$(/usr/local/homebrew/bin/brew shellenv)"
+# brew in m1 (called second to be first in PATH)
+eval "$(/opt/homebrew/bin/brew shellenv)"
