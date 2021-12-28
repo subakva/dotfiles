@@ -28,8 +28,8 @@ echo "Initializing pyenv..."
 export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init --path)"
 
-# echo "Initializing go..."
-# export GOPATH=$HOME/Code/heroku/go
+echo "Initializing go..."
+export GOPATH=$HOME/Code/go
 
 echo "Configuring Postgres.app..."
 export POSTGRESAPP_ROOT=/Applications/Postgres.app/Contents/Versions
