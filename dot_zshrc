@@ -70,10 +70,10 @@ export EDITOR=vi
 
 unsetopt nomatch # prevent errors with rake arguments - https://thoughtbot.com/blog/how-to-use-arguments-in-a-rake-task
 
-# This breaks `chezmoi cd`. maybe I won't miss it.
-# if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
-#   # cd ~/Code/heroku || return
-#   cd ~/Code || return
-# fi
+if [[ "$TERM_PROGRAM" == "iTerm.app" ]]; then
+  if [[ "$PWD" != "$HOME/.local/share/chezmoi" ]]; then
+    cd ~/Code || return
+  fi
+fi
 
 fortune | cowsay | lolcat
