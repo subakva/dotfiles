@@ -36,15 +36,15 @@ export POSTGRESAPP_ROOT=/Applications/Postgres.app/Contents/Versions
 export POSTGRESAPP_VERSION=14
 export PATH="$POSTGRESAPP_ROOT/$POSTGRESAPP_VERSION/bin:$PATH"
 # alias psql96="$POSTGRESAPP_ROOT/9.6/bin/psql"
-alias psql10="$POSTGRESAPP_ROOT/10/bin/psql"
-alias psql11="$POSTGRESAPP_ROOT/11/bin/psql"
-alias psql12="$POSTGRESAPP_ROOT/12/bin/psql"
-alias psql13="$POSTGRESAPP_ROOT/13/bin/psql"
-alias psql14="$POSTGRESAPP_ROOT/14/bin/psql"
+alias psql10="\$POSTGRESAPP_ROOT/10/bin/psql"
+alias psql11="\$POSTGRESAPP_ROOT/11/bin/psql"
+alias psql12="\$POSTGRESAPP_ROOT/12/bin/psql"
+alias psql13="\$POSTGRESAPP_ROOT/13/bin/psql"
+alias psql14="\$POSTGRESAPP_ROOT/14/bin/psql"
 
 echo "Initializing antigen..."
 source /opt/homebrew/share/antigen/antigen.zsh
-antigen init $HOME/.antigenrc
+antigen init "$HOME"/.antigenrc
 
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
@@ -59,23 +59,24 @@ alias axbrew='arch -x86_64 /usr/local/homebrew/bin/brew'
 alias be='bundle exec'
 alias gti='git'
 
-# TODO: make this conditional based on a machine-specific flag
-alias hs='heroku sudo'
-alias h='heroku'
-alias tf='terraform'
+if [[ "{{.context}}" == "work" ]]; then
+  alias hs='heroku sudo'
+  alias h='heroku'
+  alias tf='terraform'
 
-export DATA_DEV_ENV=jwadsworth
-export DATA_CODE_PATH=~/Code/heroku
-# export DATA_CODE_PATH_OBSERVATORY=/Users/jwadsworth/Code/heroku/go/src/github.com/heroku/observatory
-export HD_CONSOLE_WRITABLE=false
+  export DATA_DEV_ENV=jwadsworth
+  export DATA_CODE_PATH=~/Code/heroku
+  # export DATA_CODE_PATH_OBSERVATORY=/Users/jwadsworth/Code/heroku/go/src/github.com/heroku/observatory
+  export HD_CONSOLE_WRITABLE=false
 
-alias hd=/Users/jwadsworth/Code/heroku/shogun/bin/hd
-alias shogun='hd shogun'
-alias hdev='hd shogun heroku --'
+  alias hd=/Users/jwadsworth/Code/heroku/shogun/bin/hd
+  alias shogun='hd shogun'
+  alias hdev='hd shogun heroku --'
 
-export SFDX_AUTOUPDATE_DISABLE=true
-alias sfdev='SF_DATA_API_URL=https://elastula-jwadsworth.herokuapp.com sf'
-alias sfloc='SF_DATA_API_URL=http://localhost:3000/ sf'
+  export SFDX_AUTOUPDATE_DISABLE=true
+  alias sfdev='SF_DATA_API_URL=https://elastula-jwadsworth.herokuapp.com sf'
+  alias sfloc='SF_DATA_API_URL=http://localhost:3000/ sf'
+fi
 
 alias fp="ps -ef | grep -i "            # Find process
 alias fpp="lsof -i -P | grep -i listen" # Find ports in use

@@ -1,0 +1,10 @@
+{
+  "folders": [
+    {
+      "path": "/Users/jwadsworth/Code/heroku/yobuko"
+    }
+  ],
+  "settings": {
+    "ruby.rubocop.configFilePath": "/Users/jwadsworth/Code/heroku/yobuko/.rubocop.yml"
+  }
+}

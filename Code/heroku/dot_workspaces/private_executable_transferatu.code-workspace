@@ -1,0 +1,10 @@
+{
+  "folders": [
+    {
+      "path": "/Users/jwadsworth/Code/heroku/transferatu"
+    }
+  ],
+  "settings": {
+    "ruby.rubocop.configFilePath": "/Users/jwadsworth/Code/heroku/transferatu/.rubocop.yml"
+  }
+}

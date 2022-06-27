@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": "/Users/jwadsworth/Code/heroku/elastula"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.nyc_output": true
+    },
+    "search.exclude": {
+      "**/.nyc_output": true
+    },
+    "files.watcherExclude": {
+      "**/.nyc_output": true
+    }
+  }
+}

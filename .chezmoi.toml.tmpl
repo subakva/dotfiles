@@ -1,7 +1,8 @@
 {{- $email := promptString "email" -}}
-{{- $home := promptString "home" -}}
+{{- $home := promptString "home dir" -}}
+{{- $context := promptString "home or work" -}}
 
 [data]
     email = {{ $email | quote }}
     home = {{ $home | quote }}
-
+    context = {{ $context | quote }}

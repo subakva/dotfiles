@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "path": "/Users/jwadsworth/Code/heroku/shogun"
+    }
+  ],
+  "settings": {
+    "ruby.lint": {
+      "rubocop": true
+    },
+    "ruby.format": "rubocop"
+  }}
