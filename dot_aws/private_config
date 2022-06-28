@@ -1,0 +1,6 @@
+[default]
+region = us-east-1
+output = json
+[profile shogun-jwadsworth]
+region = us-east-1
+output = json
