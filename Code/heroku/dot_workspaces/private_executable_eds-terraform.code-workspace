@@ -1,1 +1,10 @@
-{"folders":[{"path":"/Users/jwadsworth/Code/heroku/eds-terraform"}],"settings":{}}
+{
+  "folders": [
+    {
+      "path": "/Users/jwadsworth/Code/heroku/eds-terraform"
+    }
+  ],
+  "settings": {
+    "makefile.extensionOutputFolder": "./.vscode"
+  }
+}
