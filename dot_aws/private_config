@@ -1,9 +1,10 @@
 [default]
 region = us-east-1
-output = json
-cli_auto_prompt = on
 cli_history = enabled
+output = json
 cli_pager = 
+cli_auto_prompt = off
 [profile shogun-jwadsworth]
 region = us-east-1
 output = json
+
