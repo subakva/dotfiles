@@ -51,6 +51,7 @@ brew "rbenv-default-gems"
 # brew "rbenv-gem-update" # git clone https://github.com/nicknovitski/rbenv-gem-update ~/.rbenv/plugins/rbenv-gem-update
 # brew "rbenv-update"     # git clone https://github.com/rkh/rbenv-update.git "$(rbenv root)/plugins/rbenv-update"
 brew "shellcheck"
+brew "terraform"
 brew "wget"
 brew "yarn"
 
