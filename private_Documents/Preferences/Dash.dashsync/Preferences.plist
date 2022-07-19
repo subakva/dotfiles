@@ -149,7 +149,7 @@
 			<key>golang.org/x/time/rate</key>
 			<dict>
 				<key>date</key>
-				<date>2022-07-12T23:17:56Z</date>
+				<date>2022-07-18T23:17:56Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -227,7 +227,7 @@
 			<key>aws-sdk-core</key>
 			<dict>
 				<key>date</key>
-				<date>2022-06-29T13:12:04Z</date>
+				<date>2022-07-18T23:18:10Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>
@@ -241,7 +241,7 @@
 			<key>aws-sdk-ec2</key>
 			<dict>
 				<key>date</key>
-				<date>2022-07-11T23:20:16Z</date>
+				<date>2022-07-18T23:20:15Z</date>
 				<key>entry</key>
 				<dict>
 					<key>name</key>

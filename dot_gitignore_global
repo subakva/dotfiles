@@ -1,4 +1,6 @@
+.byebug_history
 .envrc
 .env.production
 .vscode
+.byebug_history
 
